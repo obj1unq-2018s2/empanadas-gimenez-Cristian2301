@@ -11,6 +11,7 @@ object gimenez {
 		 sueldo = nuevoValor
 	}
 	method cobrarSueldo(){
+		totalQueCobro = totalQueCobro + sueldo
 		dinero = dinero + sueldo
 		if(dinero >= deuda){
 			dinero = dinero - deuda
@@ -20,7 +21,6 @@ object gimenez {
 			deuda = deuda - dinero
 			dinero = 0
 		}
-		totalQueCobro += dinero
 	}
 	method totalCobrado(){
 		return totalQueCobro
